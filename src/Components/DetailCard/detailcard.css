@@ -1,0 +1,12 @@
+.detailCard{
+    width: 400px;
+    margin: 20px auto;
+}
+.detailCard img{
+    width: 100%;
+    object-fit: contain;
+}
+.detailCard h1{
+    font-size: 16px;
+    margin: 10px;
+}

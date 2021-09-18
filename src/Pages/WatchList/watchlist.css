@@ -1,0 +1,11 @@
+.watchlater{
+    height: 87vh;
+    margin-top: 86px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+.watchlater h1{
+    color: whitesmoke;
+    /* font-size: 14px; */
+    text-align: center;
+}

@@ -1,0 +1,38 @@
+.header{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    background-color: whitesmoke;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top:0;
+    z-index: 1;
+    overflow-x: hidden;
+}
+/* .headerLogo{
+    height: 80px;
+} */
+.headerIcons{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* margin: 0 30px; */
+}
+.headerIcon {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+.headerIcon p{
+    display: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.headerIcon:hover p{
+    display: inline-block;
+}

@@ -1,0 +1,6 @@
+.favorite{
+    height: 87vh;
+    margin-top: 86px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
