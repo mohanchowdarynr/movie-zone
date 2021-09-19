@@ -8,7 +8,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
 import { useListProvider } from "../../context/ListContext";
-// import ReactPlayer from "react-player";
+import ReactPlayer from "react-player";
 import axios from "axios";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import { Loader } from "../../Components/Loader/Loader";
@@ -17,9 +17,16 @@ function DetailPage() {
   const { movieId } = useParams();
   const [loader, setLoader] = useState(true);
   const [data,setData] = useState([]);
+  const [selected,setSelected] = useState(false);
   const {dispatch} = useListProvider();
   const movie_api = "https://api.themoviedb.org/3/movie/";
   const image_api = "https://image.tmdb.org/t/p/original/";
+  
+  const handlePlayer = (e) => {
+    if (e.target.classList.contains("modal")) {
+      setSelected(null);
+    }
+  };
 
   useEffect(() => {
     async function fetchdata() {
@@ -106,7 +113,7 @@ function DetailPage() {
                     </IconButton>
                   </Tooltip>
                   <Tooltip title="Play Trailer">
-                    <IconButton >
+                    <IconButton onClick={() => setSelected(true)}>
                       <PlayArrowIcon />
                     </IconButton>
                   </Tooltip>
@@ -121,7 +128,7 @@ function DetailPage() {
               </div>
             </div>
           </div>
-          {/* {selected && (
+          {selected && (
             <div className="modal" onClick={handlePlayer}>
               <ReactPlayer
                 className="react-player"
@@ -133,7 +140,7 @@ function DetailPage() {
                 controls="true"
               />
             </div>
-          )} */}
+          )}
         </div>
       )}
     </div>

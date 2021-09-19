@@ -11,9 +11,11 @@
     z-index: 1;
     overflow-x: hidden;
 }
-/* .headerLogo{
-    height: 80px;
-} */
+.headerLogo h1{
+   font-size: 20px;
+   letter-spacing: 2px;
+   font-weight: 800;
+}
 .headerIcons{
     display: flex;
     align-items: center;

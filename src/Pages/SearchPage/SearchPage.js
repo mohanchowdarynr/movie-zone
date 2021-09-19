@@ -47,9 +47,9 @@ function SearchPage() {
         </form>
       <div className="searchPage__header">
       {
-          search ? (<h2>
+          search ? <h2>
           Search Results for <em>{search}</em>
-        </h2>) : ('')
+        </h2> : ''
       }
       </div>
       {loader ? (
@@ -62,7 +62,7 @@ function SearchPage() {
             searchMovies.map((movie) => <MovieCard movie={movie} />)
           ) : (
             <div className="search__message">
-              <h2>No movies for your search .. </h2>
+             {search ? <h2>Seach movies</h2> : ''} 
             </div>
           )}
         </div>
